@@ -1,0 +1,45 @@
+@break_lg: 1199px;
+@break_md: 991px;
+@break_sm: 767px;
+@break_xs: 480px;
+
+@fields: 25px;
+@fields_sm: 10px;
+    //прописать свой медиазапросс
+    .med(@qq, @content){
+        @media all and (max-width: @qq){
+            @content();
+        }
+    }
+    .lgb(@content){
+        @media all and (max-width: @break_lg){
+            @content();
+        }
+    }
+    .mdb(@content){
+        @media all and (max-width: @break_md){
+            @content();
+        }
+    }
+    .smb(@content){
+        @media all and (max-width: @break_sm){
+            @content();
+        }
+    }
+    .xsb(@content){
+        @media all and (max-width: @break_xs){
+            @content();
+        }
+    }
+
+    .from(@min_width, @content){
+        @media all and (min-width: @min_width){
+            @content();
+        }
+    }
+
+// .from-to(@min_width, @max_width, @content){
+//     @media all and (min-width: @min_width) and (max-width: @max_width){
+//         @content();
+//     }
+// }
